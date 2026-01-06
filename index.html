@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Cerebro de Alta Tecnología | Los 8 Inputs Sensoriales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fondo animado de neuronas -->
+    <div class="neural-background">
+        <div class="neural-grid"></div>
+        <div class="synaptic-pulses"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="brain-icon">
+                    <svg viewBox="0 0 100 100" class="brain-svg">
+                        <defs>
+                            <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff6b6b"/>
+                                <stop offset="50%" style="stop-color:#4ecdc4"/>
+                                <stop offset="100%" style="stop-color:#a855f7"/>
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#brainGradient)" d="M50 10c-22 0-40 18-40 40s18 40 40 40 40-18 40-40-18-40-40-40zm0 5c19.3 0 35 15.7 35 35s-15.7 35-35 35-35-15.7-35-35 15.7-35 35-35z"/>
+                        <circle cx="35" cy="40" r="8" fill="#ff6b6b" class="pulse-dot"/>
+                        <circle cx="65" cy="40" r="8" fill="#4ecdc4" class="pulse-dot"/>
+                        <circle cx="50" cy="60" r="10" fill="#a855f7" class="pulse-dot"/>
+                        <line x1="35" y1="40" x2="50" y2="60" stroke="#fff" stroke-width="2" opacity="0.5"/>
+                        <line x1="65" y1="40" x2="50" y2="60" stroke="#fff" stroke-width="2" opacity="0.5"/>
+                        <line x1="35" y1="40" x2="65" y2="40" stroke="#fff" stroke-width="2" opacity="0.5"/>
+                    </svg>
+                </div>
+                <h1>Tu Cerebro <span class="highlight">High-Tech</span></h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#diagram" class="nav-link">Diagrama</a>
+                <a href="#senses" class="nav-link">8 Sentidos</a>
+                <a href="#neurotransmitters" class="nav-link">Neuroquímica</a>
+                <a href="#cerebellum" class="nav-link">Cerebelo</a>
+                <a href="#neuron" class="nav-link">Neurona</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section con Diagrama -->
+    <section id="diagram" class="hero-diagram">
+        <!-- Título superior -->
+        <div class="hero-header">
+            <h2 class="hero-title">
+                <span class="title-main">Tu Cerebro <span class="highlight">High-Tech</span></span>
+                <span class="title-sub">Sigue los 8 Inputs Sensoriales</span>
+            </h2>
+        </div>
+        
+        <!-- Imagen del diagrama como elemento principal -->
+        <div class="main-diagram-container">
+            <div class="diagram-frame">
+                <div class="frame-corner top-left"></div>
+                <div class="frame-corner top-right"></div>
+                <div class="frame-corner bottom-left"></div>
+                <div class="frame-corner bottom-right"></div>
+                <div class="diagram-glow"></div>
+                <img src="brain.jpg" alt="Your High-Tech Brain - Diagrama completo de los 8 inputs sensoriales" class="brain-diagram-img">
+                <div class="diagram-overlay">
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+            <div class="diagram-controls">
+                <button class="control-btn zoom-in" title="Acercar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                    </svg>
+                </button>
+                <button class="control-btn zoom-out" title="Alejar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                    </svg>
+                </button>
+                <button class="control-btn fullscreen" title="Pantalla completa">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Info bar debajo del diagrama -->
+        <div class="diagram-info">
+            <div class="info-item">
+                <span class="info-icon">🧠</span>
+                <span class="info-text">86 Mil Millones de Neuronas</span>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">👁️</span>
+                <span class="info-text">8 Sistemas Sensoriales</span>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">⚡</span>
+                <span class="info-text">65+ Billones de Conexiones</span>
+            </div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <div class="hero-nav-buttons">
+            <a href="#stats" class="btn-primary">Explorar Estadísticas</a>
+            <a href="#senses" class="btn-secondary">Ver los 8 Sentidos</a>
+        </div>
+
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">Descubre más</span>
+            <div class="scroll-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="section-header">
+            <h2>El Córtex Cerebral en Números</h2>
+            <p>La estructura más compleja jamás estudiada</p>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card" data-delay="0">
+                <div class="stat-icon neurons-icon">
+                    <svg viewBox="0 0 64 64">
+                        <circle cx="32" cy="32" r="12" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="32" cy="32" r="4" fill="currentColor"/>
+                        <line x1="32" y1="20" x2="32" y2="8" stroke="currentColor" stroke-width="2"/>
+                        <line x1="32" y1="44" x2="32" y2="56" stroke="currentColor" stroke-width="2"/>
+                        <line x1="20" y1="32" x2="8" y2="32" stroke="currentColor" stroke-width="2"/>
+                        <line x1="44" y1="32" x2="56" y2="32" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="stat-number" data-target="86">0</div>
+                <div class="stat-unit">Mil Millones</div>
+                <div class="stat-label">Neuronas Totales</div>
+                <div class="stat-bar"><div class="stat-fill" style="--fill-width: 100%"></div></div>
+            </div>
+            <div class="stat-card" data-delay="100">
+                <div class="stat-icon cortex-icon">
+                    <svg viewBox="0 0 64 64">
+                        <path d="M32 8 C48 8 56 20 56 32 C56 44 48 56 32 56 C16 56 8 44 8 32 C8 20 16 8 32 8" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 24 Q32 16 44 24 Q36 32 44 40 Q32 48 20 40 Q28 32 20 24" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-unit">Mil Millones+</div>
+                <div class="stat-label">Neuronas en Córtex</div>
+                <div class="stat-bar"><div class="stat-fill" style="--fill-width: 85%"></div></div>
+            </div>
+            <div class="stat-card" data-delay="200">
+                <div class="stat-icon connections-icon">
+                    <svg viewBox="0 0 64 64">
+                        <circle cx="16" cy="16" r="6" fill="currentColor"/>
+                        <circle cx="48" cy="16" r="6" fill="currentColor"/>
+                        <circle cx="16" cy="48" r="6" fill="currentColor"/>
+                        <circle cx="48" cy="48" r="6" fill="currentColor"/>
+                        <circle cx="32" cy="32" r="8" fill="currentColor"/>
+                        <line x1="16" y1="16" x2="32" y2="32" stroke="currentColor" stroke-width="2"/>
+                        <line x1="48" y1="16" x2="32" y2="32" stroke="currentColor" stroke-width="2"/>
+                        <line x1="16" y1="48" x2="32" y2="32" stroke="currentColor" stroke-width="2"/>
+                        <line x1="48" y1="48" x2="32" y2="32" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="stat-number" data-target="65">0</div>
+                <div class="stat-unit">Billones+</div>
+                <div class="stat-label">Conexiones Sinápticas</div>
+                <div class="stat-bar"><div class="stat-fill" style="--fill-width: 95%"></div></div>
+            </div>
+            <div class="stat-card" data-delay="300">
+                <div class="stat-icon synapses-icon">
+                    <svg viewBox="0 0 64 64">
+                        <circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5,3"/>
+                        <text x="32" y="36" text-anchor="middle" fill="currentColor" font-size="12">10K</text>
+                    </svg>
+                </div>
+                <div class="stat-number">1,000-10,000</div>
+                <div class="stat-unit">Promedio</div>
+                <div class="stat-label">Sinapsis por Neurona</div>
+                <div class="stat-bar"><div class="stat-fill" style="--fill-width: 75%"></div></div>
+            </div>
+        </div>
+        <div class="extra-facts">
+            <div class="fact-card">
+                <span class="fact-highlight">6 capas</span> de circuitos neurales en 1mm³ de córtex
+            </div>
+            <div class="fact-card">
+                <span class="fact-highlight">100+ millones</span> de sinapsis por mm³
+            </div>
+            <div class="fact-card">
+                Área total del córtex: <span class="fact-highlight">~2,500 cm²</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8 Senses Section -->
+    <section id="senses" class="senses-section">
+        <div class="section-header">
+            <h2>Los 8 Inputs Sensoriales</h2>
+            <p>Cómo tu cerebro percibe el mundo</p>
+        </div>
+        <div class="senses-grid">
+            <!-- Vision -->
+            <div class="sense-card" data-sense="vision">
+                <div class="sense-icon">
+                    <svg viewBox="0 0 80 80">
+                        <ellipse cx="40" cy="40" rx="35" ry="22" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="40" cy="40" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="40" cy="40" r="6" fill="currentColor"/>
+                        <path d="M5 40 Q20 25 40 18" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                        <path d="M75 40 Q60 25 40 18" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                    </svg>
+                </div>
+                <h3>Visión</h3>
+                <div class="sense-stats">
+                    <div class="sense-stat">
+                        <span class="value">126M</span>
+                        <span class="label">Fotorreceptores</span>
+                    </div>
+                    <div class="sense-stat">
+                        <span class="value">1M</span>
+                        <span class="label">Axones en Nervio Óptico</span>
+                    </div>
+                </div>
+                <p class="sense-desc">6 millones de conos para color y 120 millones de bastones para luz baja. La retina procesa imágenes antes de enviarlas al cerebro.</p>
+                <div class="sense-visual vision-visual">
+                    <div class="retina-simulation"></div>
+                </div>
+            </div>
+
+            <!-- Smell -->
+            <div class="sense-card" data-sense="smell">
+                <div class="sense-icon">
+                    <svg viewBox="0 0 80 80">
+                        <path d="M40 60 Q30 50 30 40 Q30 25 40 20 Q50 25 50 40 Q50 50 40 60" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M35 35 Q40 30 45 35" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="37" cy="42" r="3" fill="currentColor"/>
+                        <circle cx="43" cy="42" r="3" fill="currentColor"/>
+                        <path d="M25 20 Q30 10 40 15" fill="none" stroke="currentColor" stroke-width="1.5" class="smell-wave"/>
+                        <path d="M55 20 Q50 10 40 15" fill="none" stroke="currentColor" stroke-width="1.5" class="smell-wave"/>
+                    </svg>
+                </div>
+                <h3>Olfato</h3>
+                <div class="sense-stats">
+                    <div class="sense-stat">
+                        <span class="value">12M</span>
+                        <span class="label">Neuronas Olfativas</span>
+                    </div>
+                    <div class="sense-stat">
+                        <span class="value">1B</span>
+                        <span class="label">Células Receptoras</span>
+                    </div>
+                </div>
+                <p class="sense-desc">Sistema de adicción/arousal conectado directamente al sistema límbico, procesando emociones y memoria.</p>
+                <div class="sense-visual smell-visual">
+                    <div class="molecule m1"></div>
+                    <div class="molecule m2"></div>
+                    <div class="molecule m3"></div>
+                </div>
+            </div>
+
+            <!-- Taste -->
+            <div class="sense-card" data-sense="taste">
+                <div class="sense-icon">
+                    <svg viewBox="0 0 80 80">
+                        <ellipse cx="40" cy="45" rx="20" ry="25" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M25 35 Q40 25 55 35" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="32" cy="40" r="4" fill="currentColor" opacity="0.7"/>
+                        <circle cx="48" cy="40" r="4" fill="currentColor" opacity="0.7"/>
+                        <circle cx="40" cy="50" r="5" fill="currentColor" opacity="0.7"/>
+                        <circle cx="35" cy="55" r="3" fill="currentColor" opacity="0.5"/>
+                        <circle cx="45" cy="55" r="3" fill="currentColor" opacity="0.5"/>
+                    </svg>
+                </div>
+                <h3>Gusto</h3>
+                <div class="sense-stats">
+                    <div class="sense-stat">
+                        <span class="value">9,000</span>
+                        <span class="label">Papilas Gustativas</span>
+                    </div>
+                    <div class="sense-stat">
+                        <span class="value">5-10</span>
+                        <span class="label">Receptores/Papila</span>
+                    </div>
+                </div>
+                <p class="sense-desc">Dulce, salado, ácido, amargo y umami. Detectan los 5 sabores primarios en diferentes regiones de la lengua.</p>
+                <div class="sense-visual taste-visual">
+                    <span class="taste-type sweet">Dulce</span>
+                    <span class="taste-type salty">Salado</span>
+                    <span class="taste-type sour">Ácido</span>
+                    <span class="taste-type bitter">Amargo</span>
+                    <span class="taste-type umami">Umami</span>
+                </div>
+            </div>
+
+            <!-- Touch -->
+            <div class="sense-card" data-sense="touch">
+                <div class="sense-icon">
+                    <svg viewBox="0 0 80 80">
+                        <path d="M40 70 L40 30 M40 30 L30 20 M40 30 L35 15 M40 30 L45 15 M40 30 L50 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="40" cy="30" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="30" cy="20" r="4" fill="currentColor" opacity="0.6"/>
+                        <circle cx="35" cy="15" r="4" fill="currentColor" opacity="0.6"/>
+                        <circle cx="45" cy="15" r="4" fill="currentColor" opacity="0.6"/>
+                        <circle cx="50" cy="20" r="4" fill="currentColor" opacity="0.6"/>
+                    </svg>
+                </div>
+                <h3>Tacto</h3>
+                <div class="sense-stats">
+                    <div class="sense-stat">
+                        <span class="value">200</span>
+                        <span class="label">Receptores dolor/cm²</span>
+                    </div>
+                    <div class="sense-stat">
+                        <span class="value">15+6+1</span>
+                        <span class="label">Presión/Frío/Calor</span>
+                    </div>
+                </div>
+                <p class="sense-desc">200 receptores de dolor, 15 de presión, 6 de frío y 1 de calor por cm². La piel es el órgano sensorial más grande.</p>
+                <div class="sense-visual touch-visual">
+                    <div class="touch-receptor r1"></div>
+                    <div class="touch-receptor r2"></div>
+                    <div class="touch-receptor r3"></div>
+                    <div class="touch-receptor r4"></div>
+                </div>
+            </div>
+
+            <!-- Hearing -->
+            <div class="sense-card" data-sense="hearing">
+                <div class="sense-icon">
+                    <svg viewBox="0 0 80 80">
+                        <path d="M30 25 Q20 35 20 45 Q20 60 35 65 Q45 68 50 60" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M50 60 Q55 50 50 40 Q45 35 50 30" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M55 30 Q60 25 55 20" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M60 40 Q70 40 70 40" stroke="currentColor" stroke-width="1.5" class="sound-wave"/>
+                        <path d="M60 45 Q75 45 75 45" stroke="currentColor" stroke-width="1.5" class="sound-wave"/>
+                        <path d="M60 35 Q75 35 75 35" stroke="currentColor" stroke-width="1.5" class="sound-wave"/>
+                    </svg>
+                </div>
+                <h3>Audición</h3>
+                <div class="sense-stats">
+                    <div class="sense-stat">
+                        <span class="value">15,500</span>
+                        <span class="label">Células Ciliadas</span>
+                    </div>
+                    <div class="sense-stat">
+                        <span class="value">100M</span>
+                        <span class="label">Neuronas Córtex</span>
+                    </div>
+                </div>
+                <p class="sense-desc">La cóclea transforma vibraciones en señales eléctricas. El ADN almacena el cableado neural.</p>
+                <div class="sense-visual hearing-visual">
+                    <div class="cochlea">
+                        <div class="spiral"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Balance -->
+            <div class="sense-card" data-sense="balance">
+                <div class="sense-icon">
+                    <svg viewBox="0 0 80 80">
+                        <line x1="20" y1="40" x2="60" y2="40" stroke="currentColor" stroke-width="2"/>
+                        <line x1="40" y1="40" x2="40" y2="20" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="40" cy="40" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="20" cy="40" r="6" fill="currentColor"/>
+                        <circle cx="60" cy="40" r="6" fill="currentColor"/>
+                        <path d="M40 20 L35 28 L45 28 Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3>Balance y Aceleración</h3>
+                <div class="sense-stats">
+                    <div class="sense-stat">
+                        <span class="value">3</span>
+                        <span class="label">Canales Semicirculares</span>
+                    </div>
+                    <div class="sense-stat">
+                        <span class="value">3D</span>
+                        <span class="label">Detección Espacial</span>
+                    </div>
+                </div>
+                <p class="sense-desc">Similar al sensor de guía militar. Detecta rotación, aceleración lineal y orientación gravitacional.</p>
+                <div class="sense-visual balance-visual">
+                    <div class="gyro-ring ring1"></div>
+                    <div class="gyro-ring ring2"></div>
+                    <div class="gyro-ring ring3"></div>
+                </div>
+            </div>
+
+            <!-- Vestibule -->
+            <div class="sense-card" data-sense="vestibule">
+                <div class="sense-icon">
+                    <svg viewBox="0 0 80 80">
+                        <ellipse cx="40" cy="40" rx="25" ry="15" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(-30 40 40)"/>
+                        <ellipse cx="40" cy="40" rx="25" ry="15" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(30 40 40)"/>
+                        <ellipse cx="40" cy="40" rx="25" ry="15" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(90 40 40)"/>
+                        <circle cx="40" cy="40" r="6" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3>Vestíbulo</h3>
+                <div class="sense-stats">
+                    <div class="sense-stat">
+                        <span class="value">2</span>
+                        <span class="label">Órganos Otolíticos</span>
+                    </div>
+                    <div class="sense-stat">
+                        <span class="value">∞</span>
+                        <span class="label">Ajuste Continuo</span>
+                    </div>
+                </div>
+                <p class="sense-desc">Estabilización de imagen, navegación y reflejo ocular. Trabaja junto con la visión para orientación espacial.</p>
+                <div class="sense-visual vestibule-visual">
+                    <div class="nav-compass"></div>
+                </div>
+            </div>
+
+            <!-- Joint Position -->
+            <div class="sense-card" data-sense="proprioception">
+                <div class="sense-icon">
+                    <svg viewBox="0 0 80 80">
+                        <circle cx="40" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <line x1="40" y1="28" x2="40" y2="45" stroke="currentColor" stroke-width="2"/>
+                        <line x1="40" y1="35" x2="25" y2="50" stroke="currentColor" stroke-width="2"/>
+                        <line x1="40" y1="35" x2="55" y2="50" stroke="currentColor" stroke-width="2"/>
+                        <line x1="40" y1="45" x2="30" y2="70" stroke="currentColor" stroke-width="2"/>
+                        <line x1="40" y1="45" x2="50" y2="70" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="40" cy="45" r="4" fill="currentColor"/>
+                        <circle cx="25" cy="50" r="3" fill="currentColor" opacity="0.7"/>
+                        <circle cx="55" cy="50" r="3" fill="currentColor" opacity="0.7"/>
+                    </svg>
+                </div>
+                <h3>Posición Articular</h3>
+                <div class="sense-stats">
+                    <div class="sense-stat">
+                        <span class="value">69B</span>
+                        <span class="label">Neuronas Hábitos</span>
+                    </div>
+                    <div class="sense-stat">
+                        <span class="value">1B</span>
+                        <span class="label">Neuronas Espinales</span>
+                    </div>
+                </div>
+                <p class="sense-desc">Propiocepción: saber dónde está tu cuerpo sin mirar. El nervio vago conecta cerebro con órganos.</p>
+                <div class="sense-visual joint-visual">
+                    <div class="body-outline"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Processing System -->
+    <section id="visual" class="visual-section">
+        <div class="section-header">
+            <h2>El Sistema de Procesamiento Visual</h2>
+            <p>De la retina al córtex: un viaje de milisegundos</p>
+        </div>
+        <div class="visual-system">
+            <div class="visual-pathway">
+                <div class="pathway-step" data-step="1">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="25" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="30" cy="30" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="30" cy="30" r="5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h4>Retina</h4>
+                    <p>126M fotorreceptores convierten luz en señales eléctricas</p>
+                </div>
+                <div class="pathway-connector"></div>
+                <div class="pathway-step" data-step="2">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 60 60">
+                            <path d="M10 30 Q30 10 50 30 Q30 50 10 30" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <line x1="30" y1="20" x2="30" y2="40" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Nervio Óptico</h4>
+                    <p>1 millón de axones transmiten información visual</p>
+                </div>
+                <div class="pathway-connector"></div>
+                <div class="pathway-step" data-step="3">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 60 60">
+                            <ellipse cx="30" cy="30" rx="20" ry="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="25" cy="28" r="4" fill="currentColor"/>
+                            <circle cx="35" cy="28" r="4" fill="currentColor"/>
+                            <circle cx="30" cy="36" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h4>Tálamo (LGN)</h4>
+                    <p>Estación de relevo y primer procesamiento</p>
+                </div>
+                <div class="pathway-connector"></div>
+                <div class="pathway-step" data-step="4">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 60 60">
+                            <path d="M15 45 Q30 15 45 45" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 40 Q30 20 40 40" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M25 35 Q30 25 35 35" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <h4>Córtex Visual (V1)</h4>
+                    <p>4-6 mil millones de neuronas procesan bordes y orientación</p>
+                </div>
+            </div>
+            <div class="visual-facts">
+                <div class="visual-fact">
+                    <div class="fact-icon">👁️</div>
+                    <div class="fact-content">
+                        <h5>Fóvea</h5>
+                        <p>200,000 conos en solo 1.5mm. Área de máxima agudeza visual.</p>
+                    </div>
+                </div>
+                <div class="visual-fact">
+                    <div class="fact-icon">🎨</div>
+                    <div class="fact-content">
+                        <h5>Colores</h5>
+                        <p>3 tipos de conos (RGB) permiten distinguir millones de colores.</p>
+                    </div>
+                </div>
+                <div class="visual-fact">
+                    <div class="fact-icon">🌙</div>
+                    <div class="fact-content">
+                        <h5>Visión Nocturna</h5>
+                        <p>Los bastones son 1000x más sensibles que los conos.</p>
+                    </div>
+                </div>
+                <div class="visual-fact">
+                    <div class="fact-icon">⚡</div>
+                    <div class="fact-content">
+                        <h5>Velocidad</h5>
+                        <p>El cerebro procesa imágenes en ~13 milisegundos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neuron Section -->
+    <section id="neuron" class="neuron-section">
+        <div class="section-header">
+            <h2>La Neurona</h2>
+            <p>El componente fundamental del pensamiento</p>
+        </div>
+        <div class="neuron-content">
+            <div class="neuron-diagram">
+                <div class="neuron-visual">
+                    <div class="dendrites">
+                        <span class="dendrite d1"></span>
+                        <span class="dendrite d2"></span>
+                        <span class="dendrite d3"></span>
+                        <span class="dendrite d4"></span>
+                        <span class="dendrite d5"></span>
+                    </div>
+                    <div class="soma">
+                        <div class="nucleus"></div>
+                    </div>
+                    <div class="axon">
+                        <div class="myelin m1"></div>
+                        <div class="myelin m2"></div>
+                        <div class="myelin m3"></div>
+                        <div class="signal-pulse"></div>
+                    </div>
+                    <div class="axon-terminals">
+                        <span class="terminal t1"></span>
+                        <span class="terminal t2"></span>
+                        <span class="terminal t3"></span>
+                    </div>
+                </div>
+                <div class="neuron-labels">
+                    <span class="label dendrite-label">Dendritas (Entrada)</span>
+                    <span class="label soma-label">Soma (Cuerpo Celular)</span>
+                    <span class="label axon-label">Axón (Salida)</span>
+                    <span class="label terminal-label">Terminales Sinápticos</span>
+                </div>
+            </div>
+            <div class="action-potential">
+                <h4>Potencial de Acción</h4>
+                <div class="potential-graph">
+                    <div class="graph-line">
+                        <svg viewBox="0 0 300 150" preserveAspectRatio="none">
+                            <path d="M0 100 L50 100 L60 100 L70 20 L80 130 L90 90 L100 100 L300 100" 
+                                  fill="none" stroke="var(--accent-cyan)" stroke-width="3" class="ap-line"/>
+                            <line x1="0" y1="100" x2="300" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="5,5"/>
+                            <text x="10" y="95" fill="rgba(255,255,255,0.5)" font-size="10">-70mV (Reposo)</text>
+                            <text x="75" y="15" fill="var(--accent-pink)" font-size="10">+20mV</text>
+                            <text x="150" y="95" fill="rgba(255,255,255,0.3)" font-size="10">Umbral: -55mV</text>
+                        </svg>
+                    </div>
+                    <p class="graph-caption">Si GABA > umbral → <strong>DISPARA</strong></p>
+                </div>
+                <div class="neuron-facts">
+                    <div class="nfact">
+                        <span class="nfact-value">100 m/s</span>
+                        <span class="nfact-label">Velocidad de señal</span>
+                    </div>
+                    <div class="nfact">
+                        <span class="nfact-value">1ms</span>
+                        <span class="nfact-label">Duración del impulso</span>
+                    </div>
+                    <div class="nfact">
+                        <span class="nfact-value">Todo o Nada</span>
+                        <span class="nfact-label">Principio de disparo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brain Regions -->
+    <section class="regions-section">
+        <div class="section-header">
+            <h2>Regiones Cerebrales</h2>
+            <p>Especialización funcional del córtex</p>
+        </div>
+        <div class="brain-map">
+            <div class="region frontal">
+                <h4>Lóbulo Frontal</h4>
+                <ul>
+                    <li>Control motor</li>
+                    <li>Planificación</li>
+                    <li>Toma de decisiones</li>
+                    <li>Personalidad</li>
+                </ul>
+            </div>
+            <div class="region parietal">
+                <h4>Lóbulo Parietal</h4>
+                <ul>
+                    <li>Sensación</li>
+                    <li>Percepción espacial</li>
+                    <li>Navegación</li>
+                    <li>Atención</li>
+                </ul>
+            </div>
+            <div class="region temporal">
+                <h4>Lóbulo Temporal</h4>
+                <ul>
+                    <li>Audición</li>
+                    <li>Memoria</li>
+                    <li>Lenguaje</li>
+                    <li>Emociones</li>
+                </ul>
+            </div>
+            <div class="region occipital">
+                <h4>Lóbulo Occipital</h4>
+                <ul>
+                    <li>Procesamiento visual</li>
+                    <li>Reconocimiento</li>
+                    <li>Percepción de color</li>
+                    <li>Movimiento</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neurotransmitters Section -->
+    <section id="neurotransmitters" class="neurotransmitters-section">
+        <div class="section-header">
+            <h2>Neurotransmisores</h2>
+            <p>Los mensajeros químicos del cerebro</p>
+        </div>
+        <div class="neuro-grid">
+            <!-- Excitatory -->
+            <div class="neuro-category excitatory">
+                <div class="category-header">
+                    <span class="category-icon">⚡</span>
+                    <h3>Excitatorios (+)</h3>
+                    <p>Estimulan la actividad neuronal</p>
+                </div>
+                <div class="neuro-list">
+                    <div class="neuro-item">
+                        <div class="neuro-name">Glutamato</div>
+                        <div class="neuro-function">Aprendizaje y memoria</div>
+                        <div class="neuro-bar"><span style="width: 95%"></span></div>
+                    </div>
+                    <div class="neuro-item">
+                        <div class="neuro-name">Acetilcolina</div>
+                        <div class="neuro-function">Atención y excitación</div>
+                        <div class="neuro-bar"><span style="width: 85%"></span></div>
+                    </div>
+                    <div class="neuro-item">
+                        <div class="neuro-name">Dopamina</div>
+                        <div class="neuro-function">Recompensa, motivación, enfoque</div>
+                        <div class="neuro-bar"><span style="width: 90%"></span></div>
+                    </div>
+                    <div class="neuro-item">
+                        <div class="neuro-name">Norepinefrina</div>
+                        <div class="neuro-function">Alerta y atención</div>
+                        <div class="neuro-bar"><span style="width: 80%"></span></div>
+                    </div>
+                    <div class="neuro-item">
+                        <div class="neuro-name">Orexina</div>
+                        <div class="neuro-function">Alimentación, adicción, excitación</div>
+                        <div class="neuro-bar"><span style="width: 70%"></span></div>
+                    </div>
+                    <div class="neuro-item">
+                        <div class="neuro-name">Histamina</div>
+                        <div class="neuro-function">Vigilia y respuesta alérgica</div>
+                        <div class="neuro-bar"><span style="width: 65%"></span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Inhibitory -->
+            <div class="neuro-category inhibitory">
+                <div class="category-header">
+                    <span class="category-icon">🌙</span>
+                    <h3>Inhibitorios (-)</h3>
+                    <p>Calman la actividad neuronal</p>
+                </div>
+                <div class="neuro-list">
+                    <div class="neuro-item">
+                        <div class="neuro-name">GABA</div>
+                        <div class="neuro-function">Calma, relajación, sueño</div>
+                        <div class="neuro-bar inhibit"><span style="width: 95%"></span></div>
+                    </div>
+                    <div class="neuro-item">
+                        <div class="neuro-name">Serotonina</div>
+                        <div class="neuro-function">Regulación del ánimo, cognición</div>
+                        <div class="neuro-bar inhibit"><span style="width: 90%"></span></div>
+                    </div>
+                    <div class="neuro-item">
+                        <div class="neuro-name">Glicina</div>
+                        <div class="neuro-function">Inhibición en médula espinal</div>
+                        <div class="neuro-bar inhibit"><span style="width: 75%"></span></div>
+                    </div>
+                    <div class="neuro-item">
+                        <div class="neuro-name">Endocannabinoides</div>
+                        <div class="neuro-function">Modulación del dolor y ánimo</div>
+                        <div class="neuro-bar inhibit"><span style="width: 70%"></span></div>
+                    </div>
+                    <div class="neuro-item">
+                        <div class="neuro-name">Opioides endógenos</div>
+                        <div class="neuro-function">Alivio del dolor y estrés</div>
+                        <div class="neuro-bar inhibit"><span style="width: 80%"></span></div>
+                    </div>
+                    <div class="neuro-item">
+                        <div class="neuro-name">Melatonina</div>
+                        <div class="neuro-function">Regulación del sueño</div>
+                        <div class="neuro-bar inhibit"><span style="width: 85%"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hormones Section -->
+    <section id="hormones" class="hormones-section">
+        <div class="section-header">
+            <h2>Sistema Hormonal</h2>
+            <p>Reguladores químicos del cuerpo y la mente</p>
+        </div>
+        <div class="hormones-grid">
+            <div class="hormone-card">
+                <div class="hormone-icon">😰</div>
+                <h4>Cortisol</h4>
+                <p>Regula estrés y metabolismo</p>
+            </div>
+            <div class="hormone-card">
+                <div class="hormone-icon">⚡</div>
+                <h4>Adrenalina</h4>
+                <p>Estrés, pánico, "lucha o huida"</p>
+            </div>
+            <div class="hormone-card">
+                <div class="hormone-icon">💕</div>
+                <h4>Oxitocina</h4>
+                <p>Intimidad, vínculos, confianza</p>
+            </div>
+            <div class="hormone-card">
+                <div class="hormone-icon">🍽️</div>
+                <h4>Leptina</h4>
+                <p>Regula hambre y saciedad</p>
+            </div>
+            <div class="hormone-card">
+                <div class="hormone-icon">🔥</div>
+                <h4>Tirotropina</h4>
+                <p>Metabolismo, energía, crecimiento</p>
+            </div>
+            <div class="hormone-card">
+                <div class="hormone-icon">💪</div>
+                <h4>Testosterona</h4>
+                <p>Desarrollo muscular y libido</p>
+            </div>
+            <div class="hormone-card">
+                <div class="hormone-icon">🌸</div>
+                <h4>Estrógeno</h4>
+                <p>Sistema reproductivo femenino</p>
+            </div>
+            <div class="hormone-card">
+                <div class="hormone-icon">🦴</div>
+                <h4>Paratiroidea</h4>
+                <p>Regula calcio en sangre</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cerebellum Section -->
+    <section id="cerebellum" class="cerebellum-section">
+        <div class="section-header">
+            <h2>El Cerebelo</h2>
+            <p>El "pequeño cerebro" con enormes capacidades</p>
+        </div>
+        <div class="cerebellum-content">
+            <div class="cerebellum-stats">
+                <div class="cb-stat main-stat">
+                    <div class="cb-number">69</div>
+                    <div class="cb-unit">Mil Millones</div>
+                    <div class="cb-label">de Neuronas</div>
+                    <p class="cb-note">¡Contiene 3/4 de todas las neuronas del cerebro!</p>
+                </div>
+                <div class="cb-stat">
+                    <div class="cb-number">1m</div>
+                    <div class="cb-label">Longitud si se desenrollara</div>
+                </div>
+                <div class="cb-stat">
+                    <div class="cb-number">10%</div>
+                    <div class="cb-label">Del volumen cerebral</div>
+                </div>
+            </div>
+            <div class="cerebellum-functions">
+                <h4>Funciones Principales</h4>
+                <div class="function-list">
+                    <div class="function-item">
+                        <span class="func-icon">🎯</span>
+                        <div>
+                            <strong>Coordinación motora</strong>
+                            <p>Control preciso de movimientos</p>
+                        </div>
+                    </div>
+                    <div class="function-item">
+                        <span class="func-icon">⚖️</span>
+                        <div>
+                            <strong>Equilibrio</strong>
+                            <p>Mantiene la postura y balance</p>
+                        </div>
+                    </div>
+                    <div class="function-item">
+                        <span class="func-icon">🧠</span>
+                        <div>
+                            <strong>Hábitos aprendidos</strong>
+                            <p>Automatiza movimientos repetidos</p>
+                        </div>
+                    </div>
+                    <div class="function-item">
+                        <span class="func-icon">🧭</span>
+                        <div>
+                            <strong>Navegación inercial</strong>
+                            <p>Calcula movimiento en el espacio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mirror Neurons Section -->
+    <section id="mirror" class="mirror-section">
+        <div class="section-header">
+            <h2>Neuronas Espejo</h2>
+            <p>La base de la empatía y el aprendizaje social</p>
+        </div>
+        <div class="mirror-content">
+            <div class="mirror-visual">
+                <div class="mirror-animation">
+                    <div class="person person-1">
+                        <div class="head"></div>
+                        <div class="body"></div>
+                        <div class="brain-wave"></div>
+                    </div>
+                    <div class="mirror-line">
+                        <span class="mirror-pulse"></span>
+                    </div>
+                    <div class="person person-2">
+                        <div class="head"></div>
+                        <div class="body"></div>
+                        <div class="brain-wave"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mirror-info">
+                <blockquote>
+                    "Las neuronas espejo son una clase particular de neuronas visomotoras que se disparan tanto al realizar una acción particular como al observar a otro individuo realizando una acción similar."
+                </blockquote>
+                <div class="mirror-facts">
+                    <div class="mfact">
+                        <span class="mfact-icon">👀</span>
+                        <p>Se activan al <strong>observar</strong> acciones de otros</p>
+                    </div>
+                    <div class="mfact">
+                        <span class="mfact-icon">🎭</span>
+                        <p>Permiten <strong>imitar</strong> y aprender comportamientos</p>
+                    </div>
+                    <div class="mfact">
+                        <span class="mfact-icon">❤️</span>
+                        <p>Base de la <strong>empatía</strong> y comprensión emocional</p>
+                    </div>
+                    <div class="mfact">
+                        <span class="mfact-icon">🗣️</span>
+                        <p>Fundamentales para el <strong>lenguaje</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Tu Cerebro High-Tech</h3>
+                <p>La máquina más compleja del universo conocido</p>
+            </div>
+            <div class="footer-links">
+                <a href="#diagram">Diagrama</a>
+                <a href="#senses">8 Sentidos</a>
+                <a href="#neurotransmitters">Neuroquímica</a>
+                <a href="#cerebellum">Cerebelo</a>
+                <a href="#mirror">Neuronas Espejo</a>
+            </div>
+            <div class="footer-credits">
+                <p>Basado en investigación neurocientífica</p>
+                <p class="copyright">© 2026 Brain Explorer</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,2360 @@
+/* ============================================
+   Tu Cerebro High-Tech - Estilos Principales
+   ============================================ */
+
+/* CSS Variables */
+:root {
+    /* Colores principales - Paleta neuromórfica */
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #1a1a25;
+    --bg-elevated: #222230;
+    
+    /* Acentos vibrantes */
+    --accent-pink: #ff6b9d;
+    --accent-cyan: #4ecdc4;
+    --accent-purple: #a855f7;
+    --accent-orange: #ff8c42;
+    --accent-yellow: #ffd93d;
+    --accent-green: #6bcb77;
+    --accent-blue: #4d96ff;
+    --accent-red: #ff6b6b;
+    
+    /* Texto */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-muted: rgba(255, 255, 255, 0.4);
+    
+    /* Gradientes */
+    --gradient-main: linear-gradient(135deg, var(--accent-pink), var(--accent-purple), var(--accent-cyan));
+    --gradient-glow: radial-gradient(circle at 50% 50%, rgba(78, 205, 196, 0.15), transparent 70%);
+    
+    /* Tipografía */
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+    
+    /* Espaciado */
+    --section-padding: clamp(4rem, 10vw, 8rem);
+    --container-width: 1400px;
+    
+    /* Animaciones */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Reset y Base */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Fondo Neural Animado */
+.neural-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.neural-grid {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(78, 205, 196, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 107, 157, 0.03) 0%, transparent 70%);
+    animation: neuralPulse 20s ease-in-out infinite;
+}
+
+.synaptic-pulses {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20% 30%, rgba(78, 205, 196, 0.8), transparent),
+        radial-gradient(2px 2px at 40% 70%, rgba(255, 107, 157, 0.8), transparent),
+        radial-gradient(2px 2px at 60% 20%, rgba(168, 85, 247, 0.8), transparent),
+        radial-gradient(2px 2px at 80% 60%, rgba(255, 140, 66, 0.8), transparent),
+        radial-gradient(2px 2px at 10% 80%, rgba(107, 203, 119, 0.8), transparent),
+        radial-gradient(2px 2px at 90% 40%, rgba(77, 150, 255, 0.8), transparent);
+    background-size: 100% 100%;
+    animation: synapseTwinkle 8s ease-in-out infinite;
+}
+
+@keyframes neuralPulse {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+    25% { transform: translate(2%, 2%) rotate(1deg); opacity: 0.8; }
+    50% { transform: translate(-1%, 3%) rotate(-1deg); opacity: 1; }
+    75% { transform: translate(1%, -2%) rotate(0.5deg); opacity: 0.9; }
+}
+
+@keyframes synapseTwinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+}
+
+/* Header */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background: linear-gradient(to bottom, rgba(10, 10, 15, 0.95), rgba(10, 10, 15, 0.8));
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-content {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brain-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.brain-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.pulse-dot {
+    animation: pulseDot 2s ease-in-out infinite;
+}
+
+.pulse-dot:nth-child(2) { animation-delay: 0.3s; }
+.pulse-dot:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes pulseDot {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.logo h1 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo .highlight {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: var(--transition-fast);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-main);
+    transition: var(--transition-smooth);
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section con Diagrama */
+.hero-diagram {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+}
+
+.hero-diagram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse at 20% 20%, rgba(255, 107, 157, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(78, 205, 196, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+    animation: heroGlow 15s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Título del Hero */
+.hero-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+}
+
+.hero-title .title-main {
+    display: block;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    animation: fadeSlideDown 0.8s ease forwards;
+}
+
+.hero-title .title-main .highlight {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-title .title-sub {
+    display: block;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    color: var(--accent-cyan);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    animation: fadeSlideDown 0.8s ease 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenedor principal del diagrama */
+.main-diagram-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 2rem;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+/* Hero Navigation Buttons */
+.hero-nav-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    z-index: 2;
+    animation: fadeSlideUp 0.8s ease 0.6s forwards;
+    opacity: 0;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 2;
+    animation: fadeIn 1s ease 1s forwards, bounce 2s ease-in-out infinite 1.5s;
+    opacity: 0;
+}
+
+.scroll-text {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.scroll-arrow {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-cyan);
+}
+
+.scroll-arrow svg {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-10px); }
+    60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+.btn-primary, .btn-secondary {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--gradient-main);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+    transform: translateY(-3px);
+    background: rgba(78, 205, 196, 0.1);
+}
+
+
+/* Section Styles */
+section {
+    padding: var(--section-padding) 2rem;
+    position: relative;
+}
+
+/* Diagram Styles */
+
+.diagram-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--bg-card);
+    padding: 1rem;
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    box-shadow: 
+        0 0 60px rgba(168, 85, 247, 0.2),
+        0 0 100px rgba(78, 205, 196, 0.1),
+        inset 0 0 60px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-smooth);
+}
+
+.diagram-frame:hover {
+    border-color: rgba(78, 205, 196, 0.5);
+    box-shadow: 
+        0 0 80px rgba(168, 85, 247, 0.3),
+        0 0 120px rgba(78, 205, 196, 0.2),
+        inset 0 0 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Frame Corners - Tech Effect */
+.frame-corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+}
+
+.frame-corner::before,
+.frame-corner::after {
+    content: '';
+    position: absolute;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 10px var(--accent-cyan);
+}
+
+.frame-corner.top-left {
+    top: 0;
+    left: 0;
+}
+.frame-corner.top-left::before {
+    width: 30px;
+    height: 3px;
+    top: 0;
+    left: 0;
+}
+.frame-corner.top-left::after {
+    width: 3px;
+    height: 30px;
+    top: 0;
+    left: 0;
+}
+
+.frame-corner.top-right {
+    top: 0;
+    right: 0;
+}
+.frame-corner.top-right::before {
+    width: 30px;
+    height: 3px;
+    top: 0;
+    right: 0;
+}
+.frame-corner.top-right::after {
+    width: 3px;
+    height: 30px;
+    top: 0;
+    right: 0;
+}
+
+.frame-corner.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+.frame-corner.bottom-left::before {
+    width: 30px;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+}
+.frame-corner.bottom-left::after {
+    width: 3px;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+}
+
+.frame-corner.bottom-right {
+    bottom: 0;
+    right: 0;
+}
+.frame-corner.bottom-right::before {
+    width: 30px;
+    height: 3px;
+    bottom: 0;
+    right: 0;
+}
+.frame-corner.bottom-right::after {
+    width: 3px;
+    height: 30px;
+    bottom: 0;
+    right: 0;
+}
+
+/* Diagram Glow Effect */
+.diagram-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        rgba(78, 205, 196, 0.1),
+        transparent,
+        rgba(168, 85, 247, 0.1),
+        transparent,
+        rgba(255, 107, 157, 0.1),
+        transparent
+    );
+    animation: rotateGlow 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotateGlow {
+    to { transform: rotate(360deg); }
+}
+
+/* Brain Diagram Image */
+.brain-diagram-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    transition: var(--transition-smooth);
+    cursor: zoom-in;
+    position: relative;
+    z-index: 2;
+}
+
+.diagram-frame:hover .brain-diagram-img {
+    filter: brightness(1.05) contrast(1.02);
+}
+
+.brain-diagram-img.zoomed {
+    transform: scale(1.5);
+    cursor: zoom-out;
+}
+
+/* Scan Line Effect */
+.diagram-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: 12px;
+    z-index: 3;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(78, 205, 196, 0.5), 
+        rgba(168, 85, 247, 0.8), 
+        rgba(78, 205, 196, 0.5), 
+        transparent
+    );
+    box-shadow: 
+        0 0 20px rgba(78, 205, 196, 0.5),
+        0 0 40px rgba(168, 85, 247, 0.3);
+    animation: scanDown 4s ease-in-out infinite;
+}
+
+@keyframes scanDown {
+    0%, 100% { 
+        top: -10px; 
+        opacity: 0;
+    }
+    10% { 
+        opacity: 1; 
+    }
+    90% { 
+        opacity: 1; 
+    }
+    95%, 100% { 
+        top: calc(100% + 10px); 
+        opacity: 0;
+    }
+}
+
+/* Diagram Controls */
+.diagram-controls {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    z-index: 20;
+}
+
+.control-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: rgba(26, 26, 37, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+    backdrop-filter: blur(10px);
+}
+
+.control-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.control-btn:hover {
+    background: rgba(78, 205, 196, 0.2);
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+    transform: scale(1.1);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+/* Diagram Info Bar */
+.diagram-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    z-index: 2;
+    animation: fadeSlideUp 0.8s ease 0.5s forwards;
+    opacity: 0;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: var(--bg-card);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.info-item:hover {
+    border-color: var(--accent-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
+}
+
+.info-icon {
+    font-size: 1.5rem;
+}
+
+.info-text {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
+/* Fullscreen Mode */
+.diagram-frame.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    border-radius: 0;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 15, 0.98);
+}
+
+.diagram-frame.fullscreen .brain-diagram-img {
+    max-width: 95vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.diagram-frame.fullscreen .diagram-controls {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+}
+
+/* Responsive Diagram */
+@media (max-width: 768px) {
+    .hero-diagram {
+        padding: 5rem 1rem 2rem;
+    }
+    
+    .hero-title .title-main {
+        font-size: 1.8rem;
+    }
+    
+    .hero-title .title-sub {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+    
+    .diagram-controls {
+        right: 0.5rem;
+        top: 0.5rem;
+    }
+    
+    .control-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .diagram-info {
+        gap: 0.75rem;
+    }
+    
+    .info-item {
+        padding: 0.6rem 1rem;
+    }
+    
+    .info-text {
+        font-size: 0.75rem;
+    }
+    
+    .hero-nav-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .hero-nav-buttons .btn-primary,
+    .hero-nav-buttons .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .scroll-indicator {
+        bottom: 1rem;
+    }
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+/* Stats Section */
+.stats-section {
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: var(--container-width);
+    margin: 0 auto 3rem;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+    animation: cardReveal 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.stat-card:nth-child(1) { animation-delay: 0s; --accent: var(--accent-pink); }
+.stat-card:nth-child(2) { animation-delay: 0.1s; --accent: var(--accent-cyan); }
+.stat-card:nth-child(3) { animation-delay: 0.2s; --accent: var(--accent-purple); }
+.stat-card:nth-child(4) { animation-delay: 0.3s; --accent: var(--accent-orange); }
+
+@keyframes cardReveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent, var(--gradient-main));
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    border-color: var(--accent, var(--accent-purple));
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    color: var(--accent, var(--accent-cyan));
+}
+
+.stat-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.stat-number {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.stat-unit {
+    font-size: 1.1rem;
+    color: var(--accent, var(--accent-cyan));
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.stat-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-top: 1.5rem;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    width: 0;
+    background: var(--accent, var(--gradient-main));
+    border-radius: 2px;
+    animation: fillBar 1.5s ease 0.5s forwards;
+}
+
+@keyframes fillBar {
+    to { width: var(--fill-width, 100%); }
+}
+
+.extra-facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.fact-card {
+    background: var(--bg-elevated);
+    padding: 1.25rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.fact-highlight {
+    color: var(--accent-cyan);
+    font-weight: 700;
+}
+
+/* Senses Section */
+.senses-section {
+    background: var(--bg-secondary);
+}
+
+.senses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.sense-card {
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.sense-card[data-sense="vision"] { --sense-color: var(--accent-blue); }
+.sense-card[data-sense="smell"] { --sense-color: var(--accent-green); }
+.sense-card[data-sense="taste"] { --sense-color: var(--accent-pink); }
+.sense-card[data-sense="touch"] { --sense-color: var(--accent-orange); }
+.sense-card[data-sense="hearing"] { --sense-color: var(--accent-purple); }
+.sense-card[data-sense="balance"] { --sense-color: var(--accent-cyan); }
+.sense-card[data-sense="vestibule"] { --sense-color: var(--accent-yellow); }
+.sense-card[data-sense="proprioception"] { --sense-color: var(--accent-red); }
+
+.sense-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle at center, var(--sense-color), transparent 70%);
+    opacity: 0;
+    transition: var(--transition-smooth);
+    pointer-events: none;
+}
+
+.sense-card:hover::before {
+    opacity: 0.1;
+}
+
+.sense-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--sense-color);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.sense-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.5rem;
+    color: var(--sense-color);
+    transition: var(--transition-smooth);
+}
+
+.sense-card:hover .sense-icon {
+    transform: scale(1.1);
+}
+
+.sense-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.sense-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--sense-color);
+}
+
+.sense-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.sense-stat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-elevated);
+    border-radius: 8px;
+}
+
+.sense-stat .label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    order: 1;
+    flex: 1;
+    text-align: right;
+}
+
+.sense-stat .value {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--sense-color);
+    order: 2;
+    flex-shrink: 0;
+}
+
+.sense-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.sense-visual {
+    height: 60px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Vision Visual */
+.vision-visual .retina-simulation {
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 50%, var(--accent-blue), transparent 30%),
+        radial-gradient(circle at 50% 50%, var(--accent-green), transparent 30%),
+        radial-gradient(circle at 70% 50%, var(--accent-red), transparent 30%);
+    animation: retinaProcess 3s linear infinite;
+}
+
+@keyframes retinaProcess {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.3); }
+}
+
+/* Smell Visual */
+.smell-visual .molecule {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    animation: moleculeFloat 4s ease-in-out infinite;
+}
+
+.molecule.m1 { left: 20%; animation-delay: 0s; }
+.molecule.m2 { left: 50%; animation-delay: 1s; }
+.molecule.m3 { left: 80%; animation-delay: 2s; }
+
+@keyframes moleculeFloat {
+    0%, 100% { top: 80%; opacity: 0; }
+    50% { top: 20%; opacity: 1; }
+}
+
+/* Taste Visual */
+.taste-visual {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.taste-type {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.taste-type.sweet { background: rgba(255, 107, 157, 0.3); color: var(--accent-pink); }
+.taste-type.salty { background: rgba(77, 150, 255, 0.3); color: var(--accent-blue); }
+.taste-type.sour { background: rgba(255, 217, 61, 0.3); color: var(--accent-yellow); }
+.taste-type.bitter { background: rgba(107, 203, 119, 0.3); color: var(--accent-green); }
+.taste-type.umami { background: rgba(168, 85, 247, 0.3); color: var(--accent-purple); }
+
+/* Touch Visual */
+.touch-visual {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.touch-receptor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-orange);
+    animation: receptorPulse 2s ease-in-out infinite;
+}
+
+.touch-receptor.r1 { animation-delay: 0s; }
+.touch-receptor.r2 { animation-delay: 0.5s; }
+.touch-receptor.r3 { animation-delay: 1s; }
+.touch-receptor.r4 { animation-delay: 1.5s; }
+
+@keyframes receptorPulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.3); opacity: 1; background: rgba(255, 140, 66, 0.3); }
+}
+
+/* Hearing Visual */
+.hearing-visual .cochlea {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+}
+
+.cochlea .spiral {
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--accent-purple);
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: cochleaSpin 3s linear infinite;
+}
+
+@keyframes cochleaSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* Balance Visual */
+.balance-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gyro-ring {
+    position: absolute;
+    border: 2px solid var(--accent-cyan);
+    border-radius: 50%;
+    animation: gyroRotate 6s linear infinite;
+}
+
+.ring1 { width: 50px; height: 50px; }
+.ring2 { width: 40px; height: 40px; animation-direction: reverse; animation-duration: 4s; }
+.ring3 { width: 30px; height: 30px; animation-duration: 8s; }
+
+@keyframes gyroRotate {
+    to { transform: rotate(360deg); }
+}
+
+/* Vestibule Visual */
+.vestibule-visual .nav-compass {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--accent-yellow);
+    border-radius: 50%;
+}
+
+.nav-compass::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    width: 4px;
+    height: 15px;
+    background: var(--accent-yellow);
+    transform: translateX(-50%);
+    animation: compassNeedle 2s ease-in-out infinite;
+}
+
+@keyframes compassNeedle {
+    0%, 100% { transform: translateX(-50%) rotate(-15deg); }
+    50% { transform: translateX(-50%) rotate(15deg); }
+}
+
+/* Joint Visual */
+.joint-visual .body-outline {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--accent-red);
+    border-radius: 15px 15px 5px 5px;
+    animation: bodyPulse 2s ease-in-out infinite;
+}
+
+.body-outline::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--accent-red);
+    border-radius: 50%;
+}
+
+@keyframes bodyPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; box-shadow: 0 0 20px var(--accent-red); }
+}
+
+/* Visual System Section */
+.visual-section {
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.visual-system {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.visual-pathway {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: var(--bg-card);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pathway-step {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.pathway-step::after {
+    content: attr(data-step);
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    color: var(--accent-cyan);
+}
+
+.step-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.pathway-step h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.pathway-step p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.pathway-connector {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+    border-radius: 2px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.pathway-connector::after {
+    content: '→';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-cyan);
+    font-size: 1.2rem;
+}
+
+.visual-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.visual-fact {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.visual-fact:hover {
+    border-color: var(--accent-cyan);
+    transform: translateX(5px);
+}
+
+.fact-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.fact-content h5 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--accent-cyan);
+    margin-bottom: 0.3rem;
+}
+
+.fact-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Neuron Section */
+.neuron-section {
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.neuron-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(255, 107, 157, 0.05) 0%, transparent 50%);
+}
+
+.neuron-content {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.neuron-diagram {
+    position: relative;
+}
+
+.neuron-visual {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dendrites */
+.dendrites {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dendrite {
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-pink), transparent);
+    border-radius: 2px;
+    transform-origin: right center;
+}
+
+.dendrite.d1 { transform: rotate(-60deg) translateX(-20px); }
+.dendrite.d2 { transform: rotate(-30deg) translateX(-10px); }
+.dendrite.d3 { transform: rotate(0deg); }
+.dendrite.d4 { transform: rotate(30deg) translateX(-10px); }
+.dendrite.d5 { transform: rotate(60deg) translateX(-20px); }
+
+.dendrite::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: var(--accent-pink);
+    border-radius: 50%;
+    animation: dendritePulse 2s ease-in-out infinite;
+}
+
+.d1::before { animation-delay: 0s; }
+.d2::before { animation-delay: 0.3s; }
+.d3::before { animation-delay: 0.6s; }
+.d4::before { animation-delay: 0.9s; }
+.d5::before { animation-delay: 1.2s; }
+
+@keyframes dendritePulse {
+    0%, 100% { opacity: 0.3; transform: translateY(-50%) scale(0.8); }
+    50% { opacity: 1; transform: translateY(-50%) scale(1.2); }
+}
+
+/* Soma */
+.soma {
+    position: absolute;
+    left: calc(10% + 80px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 40% 40%, var(--accent-purple), #4a1d7a);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.5);
+}
+
+.nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, var(--accent-pink), #a03060);
+    border-radius: 50%;
+}
+
+/* Axon */
+.axon {
+    position: absolute;
+    left: calc(10% + 160px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 12px;
+    background: var(--bg-elevated);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.myelin {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    background: linear-gradient(90deg, rgba(78, 205, 196, 0.3), rgba(78, 205, 196, 0.6), rgba(78, 205, 196, 0.3));
+    border-radius: 6px;
+}
+
+.myelin.m1 { left: 10px; }
+.myelin.m2 { left: 80px; }
+.myelin.m3 { left: 150px; }
+
+.signal-pulse {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--accent-cyan);
+    animation: signalTravel 2s ease-in-out infinite;
+}
+
+@keyframes signalTravel {
+    0% { left: 0; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+/* Axon Terminals */
+.axon-terminals {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.terminal {
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--accent-cyan));
+    border-radius: 2px;
+    transform-origin: left center;
+}
+
+.terminal.t1 { transform: rotate(-30deg); }
+.terminal.t2 { transform: rotate(0deg); }
+.terminal.t3 { transform: rotate(30deg); }
+
+.terminal::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    animation: terminalPulse 2s ease-in-out infinite;
+}
+
+.t1::after { animation-delay: 2s; }
+.t2::after { animation-delay: 2.2s; }
+.t3::after { animation-delay: 2.4s; }
+
+@keyframes terminalPulse {
+    0%, 80% { opacity: 0.3; transform: translateY(-50%) scale(0.8); }
+    90% { opacity: 1; transform: translateY(-50%) scale(1.3); }
+    100% { opacity: 0.3; transform: translateY(-50%) scale(0.8); }
+}
+
+/* Neuron Labels */
+.neuron-labels {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.label {
+    position: absolute;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dendrite-label { left: 5%; top: 20%; }
+.soma-label { left: 25%; bottom: 20%; }
+.axon-label { left: 50%; top: 20%; }
+.terminal-label { right: 5%; bottom: 20%; }
+
+/* Action Potential */
+.action-potential {
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.action-potential h4 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.potential-graph {
+    margin-bottom: 2rem;
+}
+
+.graph-line {
+    background: var(--bg-elevated);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.graph-line svg {
+    width: 100%;
+    height: 150px;
+}
+
+.ap-line {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawLine 3s ease forwards infinite;
+}
+
+@keyframes drawLine {
+    to { stroke-dashoffset: 0; }
+}
+
+.graph-caption {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.graph-caption strong {
+    color: var(--accent-cyan);
+    font-family: var(--font-display);
+}
+
+.neuron-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.nfact {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-elevated);
+    border-radius: 12px;
+}
+
+.nfact-value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-purple);
+    margin-bottom: 0.3rem;
+}
+
+.nfact-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Regions Section */
+.regions-section {
+    background: var(--bg-secondary);
+}
+
+.brain-map {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.region {
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.region::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--region-color);
+}
+
+.region.frontal { --region-color: var(--accent-pink); }
+.region.parietal { --region-color: var(--accent-cyan); }
+.region.temporal { --region-color: var(--accent-purple); }
+.region.occipital { --region-color: var(--accent-orange); }
+
+.region:hover {
+    transform: translateY(-5px);
+    border-color: var(--region-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.region h4 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--region-color);
+    margin-bottom: 1rem;
+}
+
+.region ul {
+    list-style: none;
+}
+
+.region li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.region li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--region-color);
+}
+
+/* Footer */
+.main-footer {
+    background: var(--bg-primary);
+    padding: 4rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    align-items: start;
+}
+
+.footer-brand h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--accent-cyan);
+}
+
+.footer-credits {
+    text-align: right;
+}
+
+.footer-credits p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.copyright {
+    font-family: var(--font-display);
+    color: var(--text-secondary) !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .neuron-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .neuron-visual {
+        height: 300px;
+    }
+    
+    .pathway-connector {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stats-grid,
+    .senses-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .neuron-facts {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        text-align: center;
+    }
+    
+    .footer-credits {
+        text-align: center;
+    }
+    
+    .footer-links {
+        align-items: center;
+    }
+}
+
+/* Scroll Animations */
+.stat-card,
+.sense-card,
+.pathway-step,
+.visual-fact,
+.region {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stat-card.visible,
+.sense-card.visible,
+.pathway-step.visible,
+.visual-fact.visible,
+.region.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   Neurotransmitters Section
+   ============================================ */
+.neurotransmitters-section {
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    padding: var(--section-padding) 2rem;
+}
+
+.neuro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.neuro-category {
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.neuro-category.excitatory {
+    --cat-color: var(--accent-orange);
+}
+
+.neuro-category.inhibitory {
+    --cat-color: var(--accent-purple);
+}
+
+.neuro-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--cat-color);
+}
+
+.category-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.category-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--cat-color);
+    margin-bottom: 0.25rem;
+}
+
+.category-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.neuro-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.neuro-item {
+    background: var(--bg-elevated);
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    transition: var(--transition-fast);
+}
+
+.neuro-item:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.neuro-name {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.neuro-function {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.neuro-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.neuro-bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-yellow));
+    border-radius: 2px;
+    transition: width 1s ease;
+}
+
+.neuro-bar.inhibit span {
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+}
+
+/* ============================================
+   Hormones Section
+   ============================================ */
+.hormones-section {
+    background: var(--bg-secondary);
+    padding: var(--section-padding) 2rem;
+}
+
+.hormones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.hormone-card {
+    background: var(--bg-card);
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.hormone-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-pink);
+    box-shadow: 0 20px 40px rgba(255, 107, 157, 0.15);
+}
+
+.hormone-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hormone-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.hormone-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   Cerebellum Section
+   ============================================ */
+.cerebellum-section {
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    padding: var(--section-padding) 2rem;
+}
+
+.cerebellum-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    align-items: start;
+}
+
+.cerebellum-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cb-stat {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cb-stat.main-stat {
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(168, 85, 247, 0.1));
+    border-color: var(--accent-pink);
+}
+
+.cb-number {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 900;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.cb-unit {
+    font-size: 1.2rem;
+    color: var(--accent-cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cb-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.cb-note {
+    font-size: 0.9rem;
+    color: var(--accent-pink);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.cerebellum-functions {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cerebellum-functions h4 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.function-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.function-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-elevated);
+    border-radius: 12px;
+    transition: var(--transition-fast);
+}
+
+.function-item:hover {
+    background: rgba(78, 205, 196, 0.1);
+    transform: translateX(5px);
+}
+
+.func-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.function-item strong {
+    display: block;
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.function-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ============================================
+   Mirror Neurons Section
+   ============================================ */
+.mirror-section {
+    background: var(--bg-primary);
+    padding: var(--section-padding) 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.mirror-section::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(78, 205, 196, 0.08) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mirror-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    align-items: center;
+}
+
+.mirror-visual {
+    position: relative;
+    z-index: 2;
+}
+
+.mirror-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    background: var(--bg-card);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.person .head {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.person .body {
+    width: 30px;
+    height: 50px;
+    background: var(--accent-cyan);
+    border-radius: 15px 15px 5px 5px;
+    opacity: 0.7;
+}
+
+.person .brain-wave {
+    position: absolute;
+    top: -20px;
+    width: 60px;
+    height: 30px;
+    border: 2px solid var(--accent-purple);
+    border-radius: 50%;
+    border-bottom: none;
+    animation: brainWave 2s ease-in-out infinite;
+}
+
+.person-2 .head {
+    background: var(--accent-pink);
+}
+
+.person-2 .body {
+    background: var(--accent-pink);
+}
+
+@keyframes brainWave {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+}
+
+.mirror-line {
+    width: 80px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-radius: 2px;
+}
+
+.mirror-pulse {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-purple);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: mirrorPulse 2s ease-in-out infinite;
+}
+
+@keyframes mirrorPulse {
+    0% { left: 0; opacity: 1; }
+    50% { left: calc(100% - 20px); opacity: 1; }
+    51% { left: calc(100% - 20px); opacity: 0.5; }
+    100% { left: 0; opacity: 0.5; }
+}
+
+.mirror-info {
+    position: relative;
+    z-index: 2;
+}
+
+.mirror-info blockquote {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-cyan);
+    background: var(--bg-card);
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 2rem;
+}
+
+.mirror-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.mfact {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mfact-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.mfact p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.mfact strong {
+    color: var(--accent-cyan);
+}
+
+/* Responsive for new sections */
+@media (max-width: 768px) {
+    .neuro-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cerebellum-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .mirror-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .mirror-facts {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent-purple), var(--accent-cyan));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--accent-pink), var(--accent-purple));
+}
+
